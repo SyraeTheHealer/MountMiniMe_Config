@@ -1,0 +1,11 @@
+## Interface: 70100
+## Title: MountMiniMe Config
+## Notes: A thing
+## Author: SyraeTheHealer
+## Version: 7.1.0.1
+## Dependencies: MountMiniMe
+## LoadOnDemand: 1
+localization.xml
+embeds.xml
+widgets\include.xml
+panels\include.xml
