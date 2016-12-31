@@ -14,10 +14,18 @@ L.Delete = 'Delete'
 L.EnterName = 'Enter Name'
 L.Profiles = 'Profiles'
 L.ProfilesPanelDesc = 'Allows you to manage saved MountMiniMe layouts'
-L.ShowMinimapButton = 'Show Minimap Button'
+
+
 
 --general settings panel
 L.General = 'General'
+L.ShowMinimapButton = 'Show Minimap Button'
+L.DetectDismountButton = 'Detect dismount'
+L.DismissStealthButton = 'Dismiss pet when stealthed'
+
+L.DismountOperation = "Action to take on dismount"
+L.DismountOperation_Dismiss = "Dismiss pet"
+L.DismountOperation_Summon = "Summon pet"
 
 --profile settings panel
 L.CreateProfile = 'Create Profile...'
