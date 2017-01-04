@@ -76,4 +76,14 @@ do
   else
     dismountTypeDropdown:Hide();
   end
+  
+  
+  --Stealth options
+  local hunterModeButtonToggle = GeneralPanel:Add('CheckButton', {
+    name = L.HunterModeButton,
+    get = function() return ParentAddon:IsHunterMode() end,
+    set = function(_, enable) ParentAddon:SetHunterMode(enable) end,
+    tooltip = L.HunterModeButtonTooltip
+  })
+  hunterModeButtonToggle:SetPoint('TOP', detectDismountButtonToggle, 'BOTTOM', 0, -10)
 end
