@@ -29,6 +29,10 @@ L.DismountOperation = "Action to take on dismount"
 L.DismountOperation_Dismiss = "Dismiss pet"
 L.DismountOperation_Summon = "Summon pet"
 
+L.HunterModeOperation = "Action to take mounting in hunter mode"
+L.HunterModeOperation_UseMount = "Use mount pet"
+L.HunterModeOperation_Keep = "Keep hunter pet"
+
 --profile settings panel
 L.CreateProfile = 'Create Profile...'
 L.ResetProfile = 'Reset Profile...'
