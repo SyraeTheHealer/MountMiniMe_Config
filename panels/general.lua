@@ -118,4 +118,13 @@ do
 	else
 		hunterModeTypeDropdown:Hide();
 	end
+	
+	--Per-character options
+	local perCharButtonToggle = GeneralPanel:Add('CheckButton', {
+		name = L.PerCharDismountButton,
+		get = function() return ParentAddon:IsPerCharDismount() end,
+		set = function(_, enable) ParentAddon:SetPerCharDismount(enable) end
+	})
+	perCharButtonToggle:SetPoint('TOP', hunterModeButtonToggle, 'BOTTOM', 0, -10)
+	
 end

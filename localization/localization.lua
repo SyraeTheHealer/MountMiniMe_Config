@@ -24,6 +24,7 @@ L.DetectDismountButton = 'Detect dismount'
 L.DismissStealthButton = 'Dismiss pet when stealthed'
 L.HunterModeButton = 'Hunter mode'
 L.HunterModeButtonTooltip = 'When on foot and you have a hunter pet summoned, <Left Click> will attach a mini-me to your hunter pet'
+L.PerCharDismountButton = 'Save dismount pet per-character'
 
 L.DismountOperation = "Action to take on dismount"
 L.DismountOperation_Dismiss = "Dismiss pet"
