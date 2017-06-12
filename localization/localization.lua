@@ -24,15 +24,21 @@ L.DetectDismountButton = 'Detect dismount'
 L.DismissStealthButton = 'Dismiss pet when stealthed'
 L.HunterModeButton = 'Hunter mode'
 L.HunterModeButtonTooltip = 'When on foot and you have a hunter pet summoned, <Left Click> will attach a mini-me to your hunter pet'
+L.ShapeshiftModeButton = 'Shapeshift mode'
+L.ShapeshiftModeButtonTooltip = 'When you are shapeshifted, <Left Click> will attach a mini-me to your current shapeshift form'
 L.PerCharDismountButton = 'Save dismount pet per-character'
 
 L.DismountOperation = "Action to take on dismount"
 L.DismountOperation_Dismiss = "Dismiss pet"
 L.DismountOperation_Summon = "Summon pet"
 
-L.HunterModeOperation = "Action to take mounting in hunter mode"
+L.HunterModeOperation = "Mounting in hunter mode will"
 L.HunterModeOperation_UseMount = "Use mount pet"
 L.HunterModeOperation_Keep = "Keep hunter pet"
+
+L.ShapeshiftModeOperation = "Mounting in shapeshift mode will"
+L.ShapeshiftModeOperation_UseMount = "Use mount pet"
+L.ShapeshiftModeOperation_Keep = "Keep shapeshift pet"
 
 --profile settings panel
 L.CreateProfile = 'Create Profile...'

@@ -126,4 +126,47 @@ do
 		hunterModeTypeDropdown:Hide();
 	end
 	
+	--Shapeshift mode options
+  local shapeshiftModeTypeDropdown = GeneralPanel:Add('Dropdown', {
+    name = L.ShapeshiftModeOperation,
+
+    get = function()
+      return ParentAddon:GetShapeshiftModeOperation()
+    end,
+
+    set = function(_, value)
+      ParentAddon:SetShapeshiftModeOperation(value or nil)
+    end,
+
+    items = {
+      {text = L.ShapeshiftModeOperation_UseMount, value = 'summon'},
+      {text = L.ShapeshiftModeOperation_Keep, value = 'keep'},
+    }
+  });
+
+  local shapeshiftModeButtonToggle = GeneralPanel:Add('CheckButton', {
+    name = L.ShapeshiftModeButton,
+    get = function()
+      return ParentAddon:IsShapeshiftMode();
+    end,
+    set = function(_, enable)
+      if enable then
+        shapeshiftModeTypeDropdown:Show();
+      else
+        shapeshiftModeTypeDropdown:Hide();
+      end
+      ParentAddon:SetShapeshiftMode(enable);
+    end,
+    tooltip = L.ShapeshiftModeButtonTooltip
+  })
+  shapeshiftModeButtonToggle:SetPoint('TOP', hunterModeButtonToggle, 'BOTTOM', 0, -10)
+
+  shapeshiftModeTypeDropdown:SetPoint('LEFT', shapeshiftModeButtonToggle, 'RIGHT', 200, 0);
+  shapeshiftModeTypeDropdown:SetPoint('RIGHT')
+  if ParentAddon:IsShapeshiftMode() then
+    shapeshiftModeTypeDropdown:Show();
+  else
+    shapeshiftModeTypeDropdown:Hide();
+  end
+	
 end
