@@ -27,6 +27,7 @@ L.HunterModeButtonTooltip = 'When on foot and you have a hunter pet summoned, <L
 L.ShapeshiftModeButton = 'Shapeshift mode'
 L.ShapeshiftModeButtonTooltip = 'When you are shapeshifted, <Left Click> will attach a mini-me to your current shapeshift form'
 L.PerCharDismountButton = 'Save dismount pet per-character'
+L.PerSpecDismountButton = 'Save dismount pet per-talent specialisation'
 
 L.DismountOperation = "Action to take on dismount"
 L.DismountOperation_Dismiss = "Dismiss pet"

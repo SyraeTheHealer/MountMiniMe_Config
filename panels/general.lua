@@ -75,13 +75,34 @@ do
 		dismountTypeDropdown:Hide();
 	end
 
-	--Per-character options
+	--Per-character and per-spec options
+  local perSpecButtonToggle = GeneralPanel:Add('CheckButton', {
+    name = L.PerSpecDismountButton,
+    get = function() return ParentAddon:IsPerSpecDismount() end,
+    set = function(_, enable) ParentAddon:SetPerSpecDismount(enable) end
+  })
+	
 	local perCharButtonToggle = GeneralPanel:Add('CheckButton', {
 		name = L.PerCharDismountButton,
 		get = function() return ParentAddon:IsPerCharDismount() end,
-		set = function(_, enable) ParentAddon:SetPerCharDismount(enable) end
+		set = function(_, enable)
+      if enable then
+        perSpecButtonToggle:Enable();
+      else
+        perSpecButtonToggle:Disable();
+      end
+      ParentAddon:SetPerCharDismount(enable) 
+		end		
 	})
 	perCharButtonToggle:SetPoint('TOP', detectDismountButtonToggle, 'BOTTOM', 0, -10)
+
+  perSpecButtonToggle:SetPoint('TOP', perCharButtonToggle, 'BOTTOM', 30, -10)
+  if ParentAddon:IsPerCharDismount() then
+    perSpecButtonToggle:Enable();
+  else
+    perSpecButtonToggle:Disable();
+  end
+  
 	
 	--Hunter mode options
 	local hunterModeTypeDropdown = GeneralPanel:Add('Dropdown', {
@@ -116,7 +137,7 @@ do
 		end,
 		tooltip = L.HunterModeButtonTooltip
 	})
-	hunterModeButtonToggle:SetPoint('TOP', perCharButtonToggle, 'BOTTOM', 0, -10)
+	hunterModeButtonToggle:SetPoint('TOP', perSpecButtonToggle, 'BOTTOM', -30, -10)
 
 	hunterModeTypeDropdown:SetPoint('LEFT', hunterModeButtonToggle, 'RIGHT', 200, 0);
 	hunterModeTypeDropdown:SetPoint('RIGHT')
