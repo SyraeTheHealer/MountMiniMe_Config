@@ -14,7 +14,7 @@ local MenuBackdrop = {
 local nextName = Addon:CreateNameGenerator('Frame')
 
 function Menu:New(parent)
-	local f = self:Bind(CreateFrame('Frame', nextName(), parent or _G.UIParent))
+	local f = self:Bind(CreateFrame('Frame', nextName(), parent or _G.UIParent, "BackdropTemplate"))
 
 	f.panels = {}
 	f:SetBackdrop(MenuBackdrop)

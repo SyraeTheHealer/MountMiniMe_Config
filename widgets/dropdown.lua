@@ -66,12 +66,12 @@ end
 
 local DropdownDialog = Addon:CreateClass('Frame', Addon.ScrollablePanel)
 do
-	local DropdownDialogBackdrop = {
-		bgFile   = [[Interface\ChatFrame\ChatFrameBackground]],
-		edgeFile = [[Interface\ChatFrame\ChatFrameBackground]],
-		insets   = {left = -2, right = -2, top = -2, bottom = -2},
-		edgeSize = -2,
-	}
+  local DropdownDialogBackdrop = {
+    bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background-Dark",
+    edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+    edgeSize = 2,
+    insets   = {left = -2, right = -2, top = -2, bottom = -2},
+  }
 
 	DropdownDialog.minWidth = 120
 	DropdownDialog.minHeight = 120
@@ -79,9 +79,10 @@ do
 	function DropdownDialog:New()
 		local frame = Addon.ScrollablePanel.New(self, _G.UIParent)
 
-		frame:SetBackdrop(DropdownDialogBackdrop)
-		frame:SetBackdropColor(0, 0, 0, 0.9)
-		frame:SetBackdropBorderColor(0.5, 0.5, 0.5, 0.9)
+    frame:SetBackdrop(DropdownDialogBackdrop)
+    frame:SetBackdropColor(0, 0, 0, 0.9)
+    frame:SetBackdropBorderColor(0.5, 0.5, 0.5, 0.9)
+
 		frame:EnableMouse(true)
 		frame:SetToplevel(true)
 		frame:SetMovable(true)

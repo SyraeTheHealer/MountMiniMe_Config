@@ -4,7 +4,7 @@ local ScrollablePanel = Addon:CreateClass('Frame')
 ScrollablePanel.scrollBarSize = 8
 
 function ScrollablePanel:New(parent)
-	local panel = self:Bind(CreateFrame('Frame', nil, parent))
+	local panel = self:Bind(CreateFrame('Frame', nil, parent, "BackdropTemplate"))
 	panel:SetScript('OnSizeChanged', self.OnSizeChanged)
 
 	local container = Addon.Panel:New()
